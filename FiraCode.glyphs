@@ -221,52 +221,52 @@ name = salt;
 {
 code = "sub r by r.ss01;";
 name = ss01;
-notes = "Name: Sans serif lowercase r";
+
 },
 {
 code = "sub greater_equal.liga by greater_equal.ss02;\012sub less_equal.liga by less_equal.ss02;";
 name = ss02;
-notes = "Name: Less Than/Greater Than with horizontal bar";
+
 },
 {
 code = "sub ampersand by ampersand.ss03;\012\012sub ampersand_ampersand.liga by ampersand.ss03;\012sub ampersand.spacer' ampersand.ss03 by ampersand.before.ss03;\012\012sub  [ampersand ampersand.ss03]' [ampersand ampersand.ss03] by ampersand.before.ss03;";
 name = ss03;
-notes = "Name: Traditional Ampersand";
+
 },
 {
 code = "sub dollar by dollar.ss04;\012\012sub dollar_greater.liga by dollar_greater.liga.ss04;\012sub less_dollar_greater.liga by less_dollar_greater.liga.ss04;\012sub less_dollar.liga by less_dollar.liga.ss04;";
 name = ss04;
-notes = "Name: Lightweight Dollar Sign";
+
 },
 {
 code = "sub at by at.ss05;\012sub asciitilde.spacer' asciitilde_at.liga by asciitilde;\012sub asciitilde asciitilde_at.liga' by at.ss05;";
 name = ss05;
-notes = "Name: Traditional At sign";
+
 },
 {
 code = "lookup backslash_thin {\012  ignore sub backslash.ss06 backslash';\012  sub backslash' by backslash.ss06;\012} backslash_thin;";
 name = ss06;
-notes = "Name: Thin backslash";
+
 },
 {
 code = "lookup equal_asciitilde {\012  ignore sub equal equal' asciitilde;\012  ignore sub equal' asciitilde asciitilde;\012  sub equal.spacer asciitilde' by equal_asciitilde.ss07;\012  sub equal'       asciitilde  by equal.spacer;\012} equal_asciitilde;\012\012lookup exclam_asciitilde {\012  ignore sub exclam exclam' asciitilde;\012  ignore sub exclam' asciitilde asciitilde;\012  sub exclam.spacer asciitilde' by exclam_asciitilde.ss07;\012  sub exclam'       asciitilde  by exclam.spacer;\012} exclam_asciitilde;";
 name = ss07;
-notes = "Name: Regex matching operator";
+
 },
 {
 code = "sub equal_equal.liga by equal_equal.ss08;\012sub equal_equal_equal.liga by equal_equal_equal.ss08;\012sub exclam_equal.liga by exclam_equal.ss08;\012sub exclam_equal_equal.liga by exclam_equal_equal.ss08;";
 name = ss08;
-notes = "Name: Gaps in double-triple equals";
+
 },
 {
 code = "lookup restore_greater_greater_equal {\012  sub greater_greater_equal_start.seq equal' by equal_end.seq;\012  sub greater_greater.liga' equal by greater_greater_equal_start.seq;\012} restore_greater_greater_equal;\012\012lookup restore_less_less_equal {\012  sub less_less_equal_start.seq equal' by equal_end.seq;\012  sub less_less.liga' equal by less_less_equal_start.seq;\012} restore_less_less_equal;\012\012lookup restore_bar_bar_equal {\012  sub bar_bar_equal_start.seq equal' by equal_end.seq;\012  sub bar_bar.liga' equal by bar_bar_equal_start.seq;\012} restore_bar_bar_equal;\012\012lookup restore_bar_equal {\012  sub bar_equal_start.seq equal' by equal_end.seq;\012  sub bar' equal by bar_equal_start.seq;\012} restore_bar_equal;";
 name = ss09;
-notes = "Name: Restore <<= >>= ||= |= as arrows";
+
 },
 {
 code = "lookup T_l {\012  sub T.spacer [l l.salt_low]' by T_l.liga.ss10;\012  sub T' [l l.salt_low] by T.spacer;\012} T_l;\012\012lookup F_l {\012  sub F.spacer [l l.salt_low]' by F_l.liga.ss10;\012  sub F' [l l.salt_low] by F.spacer;\012} F_l;\012\012lookup f_i {\012  sub f.spacer [i i.salt_low]' by f_i.liga.ss10;\012  sub f' [i i.salt_low] by f.spacer;\012} f_i;\012\012lookup f_j {\012  sub f.spacer [j j.salt_low]' by f_j.liga.ss10;\012  sub f' [j j.salt_low] by f.spacer;\012} f_j;\012\012lookup f_l {\012  sub f.spacer l' by f_l.liga.ss10;\012  sub f' l by f.spacer;\012} f_l;\012\012lookup f_t {\012  sub f.spacer t' by f_t.liga.ss10;\012  sub f' t by f.spacer;\012} f_t;";
 name = ss10;
-notes = "Name: Ligatures for Tl Fl fi fj fl ft";
+
 },
 {
 automatic = 1;
@@ -287,13 +287,13 @@ name = hwid;
 automatic = 1;
 code = "sub a by a.cv01;\012sub aacute by aacute.cv01;\012sub abreve by abreve.cv01;\012sub acircumflex by acircumflex.cv01;\012sub adieresis by adieresis.cv01;\012sub agrave by agrave.cv01;\012sub amacron by amacron.cv01;\012sub aogonek by aogonek.cv01;\012sub aring by aring.cv01;\012sub atilde by atilde.cv01;\012";
 name = cv01;
-notes = "Name: alternate lowercase a";
+
 },
 {
 automatic = 1;
 code = "sub g by g.cv02;\012sub gbreve by gbreve.cv02;\012sub gcircumflex by gcircumflex.cv02;\012sub gcommaaccent by gcommaaccent.cv02;\012sub gdotaccent by gdotaccent.cv02;\012";
 name = cv02;
-notes = "Name: single storey lowercase g";
+
 },
 {
 automatic = 1;
@@ -358,12 +358,12 @@ name = cv14;
 {
 code = "sub [asterisk asterisk.lc] by asterisk.cv15;\012sub [asteriskmath asteriskmath.lc] by asteriskmath.cv15;";
 name = cv15;
-notes = "Name: Top-aligned asterisk";
+
 },
 {
 code = "sub [asterisk asterisk.lc asterisk.cv15 asteriskmath asteriskmath.lc asteriskmath.cv15]\012 by [asteriskmath asteriskmath.lc asteriskmath.cv15 asterisk asterisk.lc asterisk.cv15];\012\012sub [asterisk_asterisk.liga asterisk_asterisk_asterisk.liga asterisk_slash.liga slash_asterisk.liga less_asterisk.liga less_asterisk_greater.liga asterisk_greater.liga]\012 by [asterisk_asterisk.liga.cv16 asterisk_asterisk_asterisk.liga.cv16 asterisk_slash.liga.cv16 slash_asterisk.liga.cv16 less_asterisk.liga.cv16 less_asterisk_greater.liga.cv16 asterisk_greater.liga.cv16];";
 name = cv16;
-notes = "Name: Hexagonal asterisk";
+
 },
 {
 automatic = 1;
@@ -378,58 +378,58 @@ name = cv18;
 {
 code = "sub less_equal.liga by less_equal.ss02;";
 name = cv19;
-notes = "Name: Less Than + Equal with horizontal bar";
+
 },
 {
 code = "lookup less_equal_cv20 {\012  sub less_equal_start.seq less_equal.liga' by equal_end.seq;\012  sub less.spacer' less_equal.liga by less_equal_start.seq;\012} less_equal_cv20;";
 name = cv20;
-notes = "Name: Less Than + Equal as an arrow";
+
 },
 {
 code = "lookup equal_less_cv21 {\012  ignore sub equal equal' less;\012  ignore sub equal' less [less greater equal];\012\012  sub equal.spacer less' by less_equal.liga;\012  sub equal' less by equal.spacer;\012} equal_less_cv21;";
 name = cv21;
-notes = "Name: =<";
+
 },
 {
 code = "lookup equal_less_cv22 {\012  ignore sub equal equal' less;\012  ignore sub equal' less [less greater equal];\012\012  sub equal.spacer less' by less_equal.ss02;\012  sub equal' less by equal.spacer;\012} equal_less_cv22;";
 name = cv22;
-notes = "Name: =< with horizontal bar";
+
 },
 {
 code = "sub greater_equal.liga by greater_equal.ss02;";
 name = cv23;
-notes = "Name: >= with horizontal bar";
+
 },
 {
 code = "lookup slash_equal_as_not_equal {\012  sub slash.spacer equal_end.seq' by exclam_equal.liga;\012  sub slash_equal_start.seq' equal_end.seq by slash.spacer;\012} slash_equal_as_not_equal;";
 name = cv24;
-notes = "Name: /= as not equal";
+
 },
 {
 code = "lookup period_hyphen {\012  ignore sub period period' hyphen;\012  ignore sub period' hyphen hyphen;\012  sub period.spacer hyphen' by period_hyphen.cv25;\012  sub period'       hyphen  by period.spacer;\012} period_hyphen;";
 name = cv25;
-notes = "Name: .- as ligature";
+
 },
 {
 code = "lookup colon_hyphen {\012  ignore sub colon colon' hyphen;\012  ignore sub colon' hyphen hyphen;\012  sub colon.spacer hyphen' by colon_hyphen.cv26;\012  sub colon'       hyphen  by colon.spacer;\012} colon_hyphen;";
 name = cv26;
-notes = "Name: :- as ligature";
+
 },
 {
 code = "lookup bracketleft_bracketright {\012  sub bracketleft.spacer bracketright' by bracketleft_bracketright.cv27;\012  sub bracketleft'       bracketright  by bracketleft.spacer;\012} bracketleft_bracketright;";
 name = cv27;
-notes = "Name: [] as ligature";
+
 },
 {
 code = "sub braceleft period' by bullet;\012sub period' braceright by bullet;";
 name = cv28;
-notes = "Name: {. .} as ligature";
+
 },
 {
 automatic = 1;
 code = "sub braceleft by braceleft.cv29;\012sub braceright by braceright.cv29;\012sub numbersign_braceleft.liga by numbersign_braceleft.liga.cv29;\012";
 name = cv29;
-notes = "Name: Hexagonal asterisk";
+
 },
 {
 automatic = 1;
@@ -444,7 +444,7 @@ name = cv31;
 {
 code = "lookup period_equal {\012  ignore sub period period' equal;\012  ignore sub period' equal equal;\012  sub period.spacer equal' by period_equal.cv32;\012  sub period'       equal  by period.spacer;\012} period_equal;\012";
 name = cv32;
-notes = "Name: .= as ligature";
+
 }
 );
 fontMaster = (
