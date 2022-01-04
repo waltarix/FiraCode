@@ -1,0 +1,40 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - '[0-9]+.[0-9]+-custom'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10'
+        cache: pip
+
+    - name: Install dependencies (apt)
+      run: |-
+        sudo apt-get install -y --no-install-recommends \
+          libcairo2-dev \
+          libjpeg-dev \
+        ;
+
+    - name: Install dependencies (pip)
+      run: pip install -r docker/files/requirements.txt
+
+    - name: Build
+      run: ./script/build.sh
+
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: distr/otf/*.otf
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
