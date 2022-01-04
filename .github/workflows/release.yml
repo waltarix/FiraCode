@@ -1,0 +1,38 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "[0-9]+.[0-9]+-custom"
+      - "[0-9]+.[0-9]+-custom-r[0-9]+"
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies (apt)
+        run: |-
+          sudo apt-get install -y --no-install-recommends \
+            libcairo2-dev \
+            libjpeg-dev \
+          ;
+
+      - name: Install dependencies (pip)
+        run: pip install -r docker/files/requirements.txt
+
+      - name: Build
+        run: ./script/build.sh
+
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: distr/otf/*.otf
